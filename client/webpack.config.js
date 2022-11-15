@@ -25,6 +25,7 @@ module.exports = () => {
         swDest: "src-sw.js",
       }),
       new WebpackPwaManifest({
+        icon: [{src: path.resolve("src/images/logo.png"), sizes: [96, 128, 192, 256, 384, 512], destination: path.join("assets", "icons")}],
         fingerprints: false,
         inject: true,
         name: "textEditor",
